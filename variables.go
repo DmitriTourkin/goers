@@ -11,6 +11,8 @@ var c, python, java bool
 var (
 	ToBe bool = false
 	line string = "Hello!"
+	rubles float32 = 56.7
+	rubles64 float64 = 1024.5
 	MaxInt uint64 = 1 << 64 - 1
 	z complex128 = cmplx.Sqrt(-5 + 12i)
 )
