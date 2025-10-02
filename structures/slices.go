@@ -47,3 +47,14 @@ func SliceLiterals() {
 
 	fmt.Println(s)
 }
+
+func SliceLengthAndCapacity() {
+	// length — number or elements it contains
+	// capacity — the num of element in the underlying array, counting from FRIST el in the slice
+	someArray := [10]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	slice := someArray[3:5]
+
+	fmt.Println(slice)
+	fmt.Println("slice len(slice): ", len(slice)) // 2 from index of slice till end of array
+	fmt.Println("slice cap(slice): ", cap(slice)) // 7
+}
