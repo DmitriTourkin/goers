@@ -5,5 +5,6 @@ func main() {
 	SlicesFunction()
 	SliceLengthAndCapacity()
 	SlicesWithMake()
+	RangingExample()
 }
 
