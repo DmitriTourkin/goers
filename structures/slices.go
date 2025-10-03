@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func SlicesFunction() {
 	names := [4]string{
@@ -58,3 +61,36 @@ func SliceLengthAndCapacity() {
 	fmt.Println("slice len(slice): ", len(slice)) // 2 from index of slice till end of array
 	fmt.Println("slice cap(slice): ", cap(slice)) // 7
 }
+func printSlice(s string, x []int) {
+	fmt.Printf("%s len=%d cap=%d %v\n", s, len(x), cap(x), x)
+}
+func SlicesWithMake() {
+	a := make([]int, 0, 5)
+	b := make([]int, 10, 20)
+	printSlice("a", a)
+	printSlice("b", b)
+
+	board := [][]string{
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+	}
+
+	board[0][0] = "X"
+	board[2][2] = "O"
+	board[1][2] = "X"
+	board[1][0] = "O"
+	board[0][2] = "X"
+
+	for i := 0; i < len(board); i++ {
+		fmt.Printf("%s\n", strings.Join(board[i], " "))
+	}
+
+	var s []int
+	printSlice("s ", s)
+
+	s = append(s, 0)
+	s = append(s, 1)
+	printSlice("s ", s)
+}
+

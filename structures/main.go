@@ -4,5 +4,6 @@ func main() {
 	SliceLiterals()
 	SlicesFunction()
 	SliceLengthAndCapacity()
+	SlicesWithMake()
 }
 
