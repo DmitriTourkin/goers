@@ -4,7 +4,41 @@ import (
 	"fmt"
 	"math"
 )
+ // About structs 
+type Employee struct {
+	name string
+	age int
+	isRemote bool
+}
 
+func (e *Employee) updateName(newName string) {
+	e.name = newName
+}
+
+func main() {
+	employee1 := Employee{
+		name: "Dima",
+		age: 21, 
+		isRemote: true,
+	}
+
+	employee1.updateName("Dmitry")
+
+	// anonymous stucts
+	jobs := struct {
+		level int
+		msg string
+	}{
+		level: 56,
+		msg: "Differents",
+	}
+
+	fmt.Println(jobs)
+}
+
+
+
+// Interfaces
 type Shape interface {
 	Area() float64
 }
@@ -33,16 +67,6 @@ func describeValue(t interface{}) { // VERY BROAD IMPLEMENTATION
 	fmt.Printf("Type %T, Value: %v", t, t)
 }
 
-func main() {
-	circle := Circle{5.9}
-	rectangle := Rectangle{5.7, 6.7}
-
-	calculateShape(circle)
-	calculateShape(rectangle)
-
-	describeValue(circle)
-	describeValue(rectangle)
-}
 
 
 
