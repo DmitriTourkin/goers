@@ -16,10 +16,10 @@ var (
 
 func mapsLiterals() {
 	mapping = map[string]Vertex{
-		"Yandex" : Vertex{
+		"Yandex" : {
 			40.87865, 56.2453,
 		},
-		"Google": Vertex{
+		"Google": {
 			67.473475, 83.24387,
 		},
 	}
