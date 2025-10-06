@@ -1,14 +1,28 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"math"
 )
- // About structs 
+
+// About structs
 type Employee struct {
 	name string
 	age int
 	isRemote bool
+}
+
+type Address struct {
+	Street string `json:"currentCity"`
+	City string `json:"myCity"`
+}
+
+type YetAnotherEmployee struct {
+	Name string `json:"name"`
+	Age int 		`json:"age"`
+	IsBusy bool `json:"isBusy"`
+	Address // composition
 }
 
 func (e *Employee) updateName(newName string) {
@@ -34,6 +48,12 @@ func main() {
 	}
 
 	fmt.Println(jobs)
+
+
+	employee2 := YetAnotherEmployee{"Kate", 56, false, Address{"Yellow Street", "Moscow"}}
+
+	jsonData, _ := json.Marshal(employee2)
+	fmt.Println(string(jsonData))
 }
 
 
