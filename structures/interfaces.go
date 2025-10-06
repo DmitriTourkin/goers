@@ -49,7 +49,6 @@ func main() {
 
 	fmt.Println(jobs)
 
-
 	employee2 := YetAnotherEmployee{"Kate", 56, false, Address{"Yellow Street", "Moscow"}}
 
 	jsonData, _ := json.Marshal(employee2)
